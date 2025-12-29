@@ -28,7 +28,7 @@ large-scale energy system models.
 ## Repository Structure
 - `notebooks/` – Jupyter notebooks for analysis and case studies
 - `scripts/` – Reusable helper functions and analysis utilities
-- `figures/` – Exported figures used in reports or publications
+- `figures/` – Exported plots
 
 ## Requirements
 - Python 3.10+
