@@ -36,7 +36,7 @@ large-scale energy system models.
 - HiGHS or Gurobi solver
 
 ## Notes
-This repository is part of an ongoing research project / MSc thesis.
+This repository is part of an ongoing capstone project.
 Large input data and solved network files are not included and must be
 generated separately using PyPSA-Eur.
 
