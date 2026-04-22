@@ -1,12 +1,13 @@
 # Energy System Risk Analysis with PyPSA-Eur
 
-This repository contains analysis code for electricity system modelling
-using PyPSA and PyPSA-Eur, with a focus on uncertainty and risk in
-long-term power system planning.
+This repository contains analysis code for large-scale electricity system
+modelling using PyPSA and PyPSA-Eur, with a focus on uncertainty,
+renewable integration, and system-level risk.
 
-The repository includes regional case studies (e.g. SE–DE–DK, Belgium)
-and methodological experiments related to system costs, prices,
-and flexibility under uncertain conditions.
+The work combines regional case studies (Sweden–Germany–Denmark) with
+methodological experiments to evaluate how variability in demand and
+renewable generation affects system costs, electricity prices, and
+reliance on backup generation.
 
 ## Scope
 - Deterministic baseline optimisation
@@ -18,17 +19,27 @@ and flexibility under uncertain conditions.
 
 ## Methodology
 Uncertainty is represented using a discrete scenario-based framework with
-explicit probabilities. Risk is quantified using expected values and
-Conditional Value-at-Risk (CVaR).
+explicit probabilities applied to key drivers such as demand, wind, and
+solar availability.
 
-Full Monte Carlo re-optimisation is deliberately avoided in favour of
-scenario-based risk metrics to ensure computational tractability for
-large-scale energy system models.
+Risk is quantified using:
+- Expected system cost
+- Price distribution metrics
+- Conditional Value-at-Risk (CVaR)
+
+The approach prioritises computational tractability by using scenario-based
+optimisation instead of full Monte Carlo re-optimisation.
+
+## Key Insights
+- Renewable variability significantly impacts system cost and price risk
+- Low renewable availability scenarios drive system stress and cost spikes
+- Risk metrics (e.g. CVaR) provide additional insight beyond expected values
+- System flexibility plays a critical role in mitigating uncertainty
 
 ## Repository Structure
 - `notebooks/` – Jupyter notebooks for analysis and case studies
-- `scripts/` – Reusable helper functions and analysis utilities
-- `figures/` – Exported plots
+- `scripts/` – Reusable helper functions and modelling utilities
+- `figures/` – Exported plots used for interpretation and reporting
 
 ## Requirements
 - Python 3.10+
@@ -37,6 +48,7 @@ large-scale energy system models.
 
 ## Notes
 This repository is part of an ongoing capstone project.
-Large input data and solved network files are not included and must be
-generated separately using PyPSA-Eur.
 
+Large input datasets and solved network files are not included due to size
+and reproducibility constraints. Results can be reproduced by running the
+PyPSA-Eur workflow with the appropriate configuration.
